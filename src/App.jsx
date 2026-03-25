@@ -8,6 +8,7 @@ import CVSection from './components/CVSection';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
+import Education from './components/Education';
 import Training from './components/Training';
 import Contact from './components/Contact';
 import IntroSequence from './components/IntroSequence';
@@ -38,6 +39,7 @@ function App() {
                     <CVSection />
                     <Projects />
                     <Certificates />
+                    <Education />
                     <Training />
                     <Contact />
                 </main>

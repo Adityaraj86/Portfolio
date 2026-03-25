@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Calendar, Building2 } from 'lucide-react';
+import { Award, Calendar, Building2, ExternalLink } from 'lucide-react';
 
 const Certificates = () => {
     const [hoveredExp, setHoveredExp] = useState(null);
@@ -17,7 +17,8 @@ const Certificates = () => {
                 title: "OCI 2025 Certified Data Science Professional",
                 org: "Oracle",
                 date: "Sep 2025",
-                image: "/OracleDataScience.png"
+                image: "/OracleDataScience.png",
+                link: "https://drive.google.com/file/d/1muhoi1pkgoj_MdxJE-s_Arq9GbNFzAwG/view?usp=sharing"
             }
         },
         {
@@ -30,7 +31,8 @@ const Certificates = () => {
                 title: "OCI 2025 Certified Generative AI Professional",
                 org: "Oracle",
                 date: "Sep 2025",
-                image: "/OracleGenAI.png"
+                image: "/OracleGenAI.png",
+                link: "https://drive.google.com/file/d/1UkPlPQOGGbO4dS52jBP4ZU2GaudUe_rm/view"
             }
         },
         {
@@ -43,7 +45,8 @@ const Certificates = () => {
                 title: "Cloud Computing",
                 org: "NPTEL",
                 date: "May 2025",
-                image: "/NPTEL.png"
+                image: "/NPTEL.png",
+                link: "https://drive.google.com/file/d/1b9oKJqH6-btnuW1bl4wpXtvJP7jfz3Ht/view?usp=sharing"
             }
         }
     ];
@@ -84,19 +87,23 @@ const Certificates = () => {
                             {/* Animated Timeline Node */}
                             <div className="absolute -left-[41px] md:-left-[57px] top-6 w-4 h-4 rounded-full bg-teal-400 shadow-[0_0_15px_rgba(45,212,191,0.5)] border-4 border-[#030303] group-hover:bg-purple-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] group-hover:scale-150 transition-all duration-500 z-20"></div>
 
-                            <motion.div
+                            <motion.a
+                                href={exp.certificate.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="relative flex flex-col gap-6 w-full bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl cursor-pointer hover:-translate-y-2 hover:border-teal-400/50 hover:shadow-[0_15px_40px_rgba(45,212,191,0.1)] transition-all duration-500 z-10"
+                                className="relative flex flex-col gap-6 w-full bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl cursor-pointer hover:-translate-y-2 hover:border-teal-400/50 hover:shadow-[0_15px_40px_rgba(45,212,191,0.1)] transition-all duration-500 z-10 block"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                                     <div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight group-hover:text-teal-300 transition-colors">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight group-hover:text-teal-300 transition-colors flex items-center gap-2">
                                             {exp.role}
+                                            <ExternalLink size={20} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-teal-400" />
                                         </h3>
                                         <div className="flex items-center gap-2 text-purple-400 font-semibold tracking-wide">
                                             <Building2 size={18} />
@@ -114,7 +121,7 @@ const Certificates = () => {
                                 <p className="text-gray-400 leading-relaxed font-medium">
                                     {exp.description}
                                 </p>
-                            </motion.div>
+                            </motion.a>
                         </div>
                     ))}
                 </div>

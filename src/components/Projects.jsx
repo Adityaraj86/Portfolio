@@ -7,7 +7,7 @@ const projects = [
         title: "Disease Prediction System",
         description: "A platform to predict disease based on symptoms.",
         tech: ["Python", "Streamlit", "ML"],
-        image: "/dps.png",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000",
         github: "https://github.com/Adityaraj86/Disease-prediction-system",
         live: "https://disease-prediction-system-2-uixj.onrender.com/"
     },
@@ -15,14 +15,14 @@ const projects = [
         title: "Mumbai Real Estate Price Analysis and Prediction",
         description: "Mumbai Real Estate Price Analysis and Prediction",
         tech: ["Python", "Matplotlib", "Seaborn", "ML"],
-        image: "/MRSP.png",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
         github: "https://github.com/Adityaraj86/Mumbai-Real-Estate-Sales-EDA?tab=readme-ov-file"
     },
     {
         title: "Real Estate Sales Dashboard",
         description: "Real Estate Sales Dashboard",
         tech: ["Excel"],
-        image: "/Excel.png",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
         github: "https://github.com/Adityaraj86/Real--Estate--Dashboard-Excel"
     }
 ];
